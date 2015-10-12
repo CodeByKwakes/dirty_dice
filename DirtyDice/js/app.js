@@ -32,7 +32,6 @@ function rollDice(){
     die2.innerHTML = d2;
     playerOneRolls.push([d1, d2])
     playerOneTotal += diceTotal
-    // console.log(playerOneRolls);
     $("#playerOneRolls").append("<li>Throw "+playerOneRolls.length+": "+d1 + " & "+ d2+"</li>")
     status.innerHTML = "Player One Rolled " +d1+ " & " +d2;
     play1.innerHTML = playerOneTotal;
@@ -52,7 +51,6 @@ function rollDice(){
     die2.innerHTML = d2;
     playerTwoRolls.push([d1, d2])
     playerTwoTotal += diceTotal
-    console.log(playerTwoRolls);
     $("#playerTwoRolls").append("<li>Throw "+playerTwoRolls.length+": "+d1 + " & "+ d2+"</li>")
     status.innerHTML = "Player Two Rolled " +d1+ " & " +d2;
     play2.innerHTML = playerTwoTotal;
@@ -72,21 +70,18 @@ function rollDice(){
   }
 }
 
-// function playerRoundScore(){
-//   var playerOneScore = new playerOneRound;
-//   var playerTwoScore = new playerTwoRound;
 
-//   $('#playerOneRound').append("<li>" + playerOneTotal + "</li>")
+// function gameScoreBoard(){
+//     document.getElementById("playerOneGame"). = +playerOneTotal
+//   }
 
-// }
+  // document.getElementById("playerOneGame"). = +playerOneTotal;
+  // document.getElementById("playerTwoGame");
+  // gameScore1.innerHTML = playerOneRolls;
+  // gameScore2.innerHTML = playerTwoTotal;
 
+  
 
-
-//build a function to store the results of each round
-// player one rolls 3 times move from playerOneRolls to playerOneRound
-
-// player two rolls 3 times move from playerTwoRolls to playerOneRound
-// $('#playerTwoRound').append("<li>" + playerTwoTotal + "</li>")
 
 
 

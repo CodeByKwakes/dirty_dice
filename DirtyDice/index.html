@@ -3,42 +3,51 @@
 <head>
   <title>dice test</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <script type="text/javascript" src="./js/app.js"></script>
 </head>
 <body>
-  <h1 id="whosTurn"></h1>
-  <div id="die1" class="dice"></div>
-  <div id="die2" class="dice"></div>
-  <button id="diceRoll">Throw the Dice</button>
-  <h2 id="status"></h2>
-  <h3>Player One Rolls</h3>
-  <ul id="playerOneRolls">
-  </ul>
-  <h3>Player One Round Total:</h3>
-  <ul id="p1Total">
+  <section id="centre">
+    <h1 id="whosTurn"></h1>
+    <div id="die1" class="dice"></div>
+    <div id="die2" class="dice"></div>
+    <button id="diceRoll">Throw the Dice</button>
+    <h2 id="status"></h2>
+  </section>
 
-  </ul>
+  <section =id="1stPlayer">
+    <h3>Player One Rolls</h3>
+    <ul id="playerOneRolls"></ul>
+    <h3>Player One Round Total:</h3>
+    <ul id="p1Total"></ul>
+  </section>
 
-
+<section id="2ndPlayer">
   <h3>Player Two Rolls</h3>
-  <ul id="playerTwoRolls">
-    
-  </ul>
+  <ul id="playerTwoRolls"></ul>
   <h3>Player Two Round Total:</h3>
-  <ul id="p2Total">
-
-  </ul>
+  <ul id="p2Total"></ul>
+</section>
+  
 
 
   <h3>Player One Rounds column</h3>
-  <ul id="playerOneRoundCol">
+  <ul id="playerOneRoundCol"></ul>
   
-  </ul>
+  
 
   <h3>Player Two Round colum</h3>
-  <ul id="playerTwoRoundCol">
+  <ul id="playerTwoRoundCol"></ul>
  
-  </ul>
+  
+  <footer>
+    <h3>Player One Score</h3>
+    <ul id="playerOneGame"></ul>
+    
+    <h3>Player Two Score</h3>
+    <ul id="playerTwoGame"></ul> 
+  </footer>
+
+
 </body>
 </html>
