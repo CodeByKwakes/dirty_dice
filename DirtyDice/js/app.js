@@ -1,22 +1,27 @@
-// Dirty Dice
-// the objective of the game is to achieve the highest score after 5 rounds.
-// each player get 3 throws per round
-// after the 3rd throw the total round score is added (plus probabilty bonus)
-//
+$(function(){
+    setUp();
+})
 
-// player roll function
-
-var rollbutton = document.getElementById("playerOne");
-rollbutton.addEventListener("click", updateDiceValues)
-
-function updateDiceValues(){
-  var dice1 = rollDice()
-  var dice2 = rollDice()
-  console.log(dice1 + " & " + dice2)
-  console.log("Dice 1: " + dice1 + " & Dice 2: " + dice2)
+function setUp(){
+    document.getElementById('diceRoll').addEventListener("click", rollDice);
 }
 
 function rollDice(){
-  return Math.ceil(Math.random()*6);
+    var die1 = document.getElementById("die1");
+    var die2 = document.getElementById("die2");
+    var status = document.getElementById("status");
+    var d1 = Math.floor(Math.random() * 6) + 1;
+    var d2 = Math.floor(Math.random() * 6) + 1;
+    // console.log(d1 + " & " + d2);
+    // console.log("Dice 1: " + d1 + " & Dice 2: " + d2);
+    var diceTotal = d1 + d2;
+    die1.innerHTML = d1;
+    die2.innerHTML = d2;
+    status.innerHTML = "Player One rolled "+diceTotal+".";
+    if(d1 == d2){
+        status.innerHTML += " DOUBLES! ";
+    }
 }
+
+
 
