@@ -1,7 +1,15 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
 header {
   width: 960px;
   margin: 0 auto;
-  text-align: center;
 }
 
 main {
@@ -15,3 +23,6 @@ section {
   float: left;
 }
 
+li {
+  list-style-type: none;
+}

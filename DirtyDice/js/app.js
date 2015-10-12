@@ -16,7 +16,7 @@ function changePlayer(){
 }
 
 function newRound(){
-  return numberOfRolls === 6;
+  return numberOfRolls === 5;
 }
 
 function rollDice(){
@@ -39,7 +39,7 @@ function play(){
 
   $("#player_"+player+"_rolls").append("<li>Throw "+rolls[player].length+": " + d1 + " & "+ d2+"</li>")
 
-  $("#status").html("Player " + player + " Rolled " +d1+ " & " +d2);
+  $("#status").html("Player " + (parseInt(player)+1) + " rolled " + diceTotal);
 
   // Add the total
   $("#player_"+player+"_total").html(totals[player]);
@@ -48,81 +48,14 @@ function play(){
     $("#status").html($("#status").html() + " - You threw DOUBLES!");
   }
   
-  if(newRound()) {
-    numberOfRolls = 0;
-    numberOfRounds++;
-    player = 0;
-
+  if (newRound()) {
     $("#player_0_roundstotal").append("<li>Round "+ numberOfRounds +": " + totals[0] + "</li>");
     $("#player_1_roundstotal").append("<li>Round "+ numberOfRounds +": " + totals[1] + "</li>");
+    numberOfRolls = 0;
+    numberOfRounds++;
+  } else {
+    numberOfRolls++;
   }
 
-  numberOfRolls++;
+  if (numberOfRounds === 6) return alert("Game Over");
 }
-
-// var playerOneTotal = 0;
-// var playerTwoTotal = 0;
-// var playerTwoRolls = [];
-// var playerOneRolls = [];
-// var turn           = 1;
-// var roundNum       = 1;
-
-//   player = 0
-//   rolls    = playerOneRolls;
-//   total    = playerOneTotal;
-//   selector = "#playerOneRolls";
-//   col      = "#playerOneRoundCol";
-//   player   = "1"; 
-//   next     = "2";
-//   score    = play1;
-// } else {
-//   rolls    = playerTwoRolls;
-//   total    = playerTwoTotal;
-//   selector = "#playerTwoRolls";
-//   col      = "#playerTwoRoundCol";
-//   player   = "2"; 
-//   next     = "1";
-//   score    = play2;
-// }
-
-//   // player 1
-//   die1.innerHTML = d1;
-//   die2.innerHTML = d2;
-//   playerOneRolls.push([d1, d2])
-//   playerOneTotal += diceTotal
-//   $("#playerOneRolls").append("<li>Throw "+playerOneRolls.length+": "+d1 + " & "+ d2+"</li>")
-//   status.innerHTML = "Player One Rolled " +d1+ " & " +d2;
-//   play1.innerHTML = playerOneTotal;
-  
-//   if(d1 == d2){
-//     status.innerHTML += " - You threw DOUBLES! ";
-//   }
-  
-//   if(playerOneRolls.length % 3 === 0){  //cange this to  == 3
-//     whosTurn.innerHTML = "Player Two's turn"
-//     $('#playerOneRoundCol').append("<li>Round "+ roundNum +": " + playerOneTotal + "</li>")
-//   }
-
-// }else{
-//   //player 2
-//   die1.innerHTML = d1;
-//   die2.innerHTML = d2;
-//   playerTwoRolls.push([d1, d2])
-//   playerTwoTotal += diceTotal
-//   $("#playerTwoRolls").append("<li>Throw "+playerTwoRolls.length+": "+d1 + " & "+ d2+"</li>")
-//   status.innerHTML = "Player Two Rolled " +d1+ " & " +d2;
-//   play2.innerHTML = playerTwoTotal;
-  
-//   if(d1 == d2){
-//     status.innerHTML += " - You threw DOUBLES! ";
-//   }
-//   if(playerTwoRolls.length % 3 === 0){
-//     whosTurn.innerHTML = "Player One's turn"
-//     $('#playerTwoRoundCol').append("<li>Round "+ roundNum +": " + playerTwoTotal + "</li>")
-//     roundNum++
-//     playerOneTotal = 0
-//     playerTwoTotal = 0
-//     $('#playerOneRolls').html("")
-//     $('#playerTwoRolls').html("")
-//   }
-// }
