@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>dice test</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="./js/app.js"></script>
 </head>
 <body>
-  <section id="centre">
-    <h1 id="whosTurn"></h1>
+
+  <header>
+    <h1 id="whosTurn">Player One's turn</h1>
     <div id="die1" class="dice"></div>
     <div id="die2" class="dice"></div>
     <button id="diceRoll">Throw the Dice</button>
     <h2 id="status"></h2>
-  </section>
+  </header>
 
-  <section =id="1stPlayer">
-    <h3>Player One Rolls</h3>
-    <ul id="playerOneRolls"></ul>
-    <h3>Player One Round Total:</h3>
-    <ul id="p1Total"></ul>
-  </section>
+  <main>
+    <section>
+      <h2>Player 1</h2>
+      
+      <h3>Rolls</h3>
+      <ul id="player_0_rolls"></ul>
+      
+      <h3>Rounds</h3>
+      <ul id="player_0_roundstotal"></ul>
 
-<section id="2ndPlayer">
-  <h3>Player Two Rolls</h3>
-  <ul id="playerTwoRolls"></ul>
-  <h3>Player Two Round Total:</h3>
-  <ul id="p2Total"></ul>
-</section>
-  
+      <h3>Total</h3>
+      <ul id="player_0_total"></ul>
+    </section>
 
-
-  <h3>Player One Rounds column</h3>
-  <ul id="playerOneRoundCol"></ul>
-  
-  
-
-  <h3>Player Two Round colum</h3>
-  <ul id="playerTwoRoundCol"></ul>
- 
-  
-  <footer>
-    <h3>Player One Score</h3>
-    <ul id="playerOneGame"></ul>
+    <section>
+      <h2>Player 2</h2>
+      
+      <h3>Rolls</h3>
+      <ul id="player_1_rolls"></ul>
+      
+      <h3>Rounds</h3>
+      <ul id="player_1_roundstotal"></ul>
     
-    <h3>Player Two Score</h3>
-    <ul id="playerTwoGame"></ul> 
-  </footer>
-
+      <h3>Total</h3>
+      <ul id="player_1_total"></ul>
+    </section>
+  </main> 
 
 </body>
 </html>
