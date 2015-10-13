@@ -1,54 +1,44 @@
 $(setUp);
 
-var player         = 0;
-var numberOfRolls  = 0;
-var numberOfRounds = 1;
-var rollsPerRound  = 3;
-var rolls          = [[], []];
-var totals         = [0, 0];
+var player         = 0,
+    numberOfRolls  = 0,
+    numberOfRounds = 1,
+    rollsPerRound  = 3,
+    rolls          = [[], []],
+    totals         = [0, 0],
+    d1, 
+    d2,
+    diceTotal,
+    dice = [null, "one", "two", "three", "four", "five", "six"];
 
 function setUp(){
   $('#diceRoll').on("click", play);
+  $("header").on("click", "#reset", reset);
 }
 
 function changePlayer(){
   return numberOfRolls < 3;
 }
 
-function newRound(){
+function newRoundCheck(){
   return numberOfRolls === 5;
 }
 
-function rollDice(){
-  return Math.floor(Math.random() * 6) + 1;
+function end(){
+  return numberOfRounds === 6;
 }
 
-function play(){
-  var d1         = rollDice();
-  var d2         = rollDice();
-  var diceTotal  = d1 + d2;
-  
-  $("#die1").html(d1);
-  $("#die2").html(d2);
-
-  player = changePlayer() ? 0 : 1;
-  next   = (player === 0) ? 1 : 0;
-
-  rolls[player].push([d1, d2]);
-  totals[player] += diceTotal;
-
-  $("#player_"+player+"_rolls").append("<li>Throw "+rolls[player].length+": " + d1 + " & "+ d2+"</li>")
-
-  $("#status").html("Player " + (parseInt(player)+1) + " rolled " + diceTotal);
-
-  // Add the total
-  $("#player_"+player+"_total").html(totals[player]);
-  
-  if (d1 === d2) {
-    $("#status").html($("#status").html() + " - You threw DOUBLES!");
+function gameOver(){
+  if (end()) {
+    var winner = totals[0] > totals[1] ? "1" : "2";
+    $("#status").html("Player "+winner+" won with a score of "+totals[winner-1]);
+    $("#diceRoll").hide();
+    $("header").append("<button id='reset'>Play Again</button>");
   }
-  
-  if (newRound()) {
+}
+
+function newRound(){
+  if (newRoundCheck()) {
     $("#player_0_roundstotal").append("<li>Round "+ numberOfRounds +": " + totals[0] + "</li>");
     $("#player_1_roundstotal").append("<li>Round "+ numberOfRounds +": " + totals[1] + "</li>");
     numberOfRolls = 0;
@@ -56,6 +46,86 @@ function play(){
   } else {
     numberOfRolls++;
   }
+}
 
-  if (numberOfRounds === 6) return alert("Game Over");
+function increaseTotal() {
+  totals[player] += diceTotal;
+  return $("#player_"+player+"_total").html(totals[player]);
+}
+
+function updateRolls(){
+  var string = "<li class='dice'>"+
+                 "<div class='die "+dice[d1]+"'></div>" +
+                 "<div class='die "+dice[d2]+"'></div>" +
+               "</li>"
+  return $("#player_"+player+"_rolls").append(string);
+}
+
+function updateStatus(){
+  return $("#status").html("Player " + (parseInt(player)+1) + " Rolled: " + diceTotal);
+}
+
+function storeRolls(){
+  return rolls[player].push([d1, d2]);
+}
+
+function checkForDoubles(){
+  if (d1 === d2) {
+    $("#status").html($("#status").html() + " - You threw DOUBLES!");
+    totals[player] += diceTotal;
+  }
+}
+
+function choosePlayer(){
+  player = changePlayer() ? 0 : 1;
+  return player;
+}
+
+function displayDice(){
+  $("#dice").empty();
+  $("#dice").append("<div class='die "+dice[d1]+"'></div>");
+  $("#dice").append("<div class='die "+dice[d2]+"'></div>");
+}
+
+function rollDice(){
+  d1 = Math.floor(Math.random() * 6) + 1;
+  d2 = Math.floor(Math.random() * 6) + 1;
+  diceTotal  = d1 + d2;
+  displayDice();
+}
+
+function reset(){
+  player         = 0;
+  numberOfRolls  = 0;
+  numberOfRounds = 1;
+  rollsPerRound  = 3;
+  rolls          = [[], []];
+  totals         = [0, 0];
+  d1;
+  d2;
+  diceTotal;
+  $("#player_0_total").empty();
+  $("#player_1_total").empty();
+  $("#player_0_rolls").empty();
+  $("#player_1_rolls").empty();
+  $("#player_0_roundstotal").empty();
+  $("#player_1_roundstotal").empty();
+  $("#die1").empty();
+  $("#die2").empty();
+  $("#status").html("Are you feeling lucky?");
+  $("#reset").remove();
+  $("#diceRoll").show();
+}
+
+function play(){
+  if (end()) return false;
+  rollDice();
+  choosePlayer()
+  storeRolls();
+  updateRolls();
+  updateStatus();
+  increaseTotal();
+  checkForDoubles();
+  newRound();
+  gameOver();
 }
