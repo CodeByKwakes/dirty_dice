@@ -13,12 +13,16 @@ h1{
   font-size: 55px;
   margin: 0;
   margin-top: 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 h2{
-  font-family: graff-s;
+  font-family: graff;
   font-size: 45px;
+  color: #F8212C;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
 
 html, body {
   height: 100%;
@@ -38,6 +42,17 @@ h4 {
 
 h4:hover {
   cursor: pointer;
+  color: #F8212C;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h5 {
+  clear: both;
+  text-align: center;
+  font-family: graff;
+  font-size: 20px;
+  margin-top: 373px;
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 body, ul, li {
@@ -52,12 +67,11 @@ img {
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  background: #BC967F;
+  background: black;
   color: #fff;
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
-  /*background-size: 100%;*/
   background-image: url("../images/dirty-dice.png");
   width: 1000px;
   margin: 0 auto;
@@ -77,15 +91,23 @@ main {
   float: left;
 }
 
-.player-one, .player-two {
+.player-one {
   margin-top: 30px;
   float: left;
   width: 200px;
+  display: inline-block;
+}
+
+.player-two {
+  margin-top: 30px;
+  width: 200px;
+  display: inline-block;
 }
 
 #player_0_total, #player_1_total {
-  font-family: graff;
+  font-family: graff-s;
   font-size: 60px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 section {
@@ -135,53 +157,53 @@ button#reset {
 .die.two:after { 
   background: transparent;
   box-shadow: -2.3em -2.3em 0 #345, 
-         2.3em  2.3em 0 #345, 
-        -2.3em -2.3em 0 #FFF, 
-         2.3em  2.4em 0 #FFF 
+  2.3em  2.3em 0 #345, 
+  -2.3em -2.3em 0 #FFF, 
+  2.3em  2.4em 0 #FFF 
 }
 .die.three:after { 
   box-shadow: -2.3em -2.3em 0 #345, 
-         2.3em  2.3em 0 #345, 
-        -2.3em -2.3em 0 #FFF, 
-         2.3em  2.4em 0 #FFF, 
-             0   .2em 0 #FFF 
+  2.3em  2.3em 0 #345, 
+  -2.3em -2.3em 0 #FFF, 
+  2.3em  2.4em 0 #FFF, 
+  0   .2em 0 #FFF 
 }
 .die.four:after { 
   background: transparent;
-        box-shadow: -2.3em -2.3em 0 #345, 
-               2.3em  2.3em 0 #345, 
-              -2.3em  2.3em 0 #345, 
-               2.3em -2.3em 0 #345, 
-              -2.3em -2.3em 0 #FFF, 
-               2.3em  2.4em 0 #FFF, 
-              -2.3em  2.4em 0 #FFF, 
-               2.3em -2.3em 0 #FFF 
+  box-shadow: -2.3em -2.3em 0 #345, 
+  2.3em  2.3em 0 #345, 
+  -2.3em  2.3em 0 #345, 
+  2.3em -2.3em 0 #345, 
+  -2.3em -2.3em 0 #FFF, 
+  2.3em  2.4em 0 #FFF, 
+  -2.3em  2.4em 0 #FFF, 
+  2.3em -2.3em 0 #FFF 
 }
 .die.five:after { 
   box-shadow: -2.3em -2.3em 0 #345, 
-         2.3em  2.3em 0 #345, 
-        -2.3em  2.3em 0 #345, 
-         2.3em -2.3em 0 #345, 
-        -2.3em -2.2em 0 #FFF, 
-         2.3em -2.2em 0 #FFF, 
-         2.3em  2.4em 0 #FFF, 
-        -2.3em  2.4em 0 #FFF,
-             0   .2em 0 #FFF 
+  2.3em  2.3em 0 #345, 
+  -2.3em  2.3em 0 #345, 
+  2.3em -2.3em 0 #345, 
+  -2.3em -2.2em 0 #FFF, 
+  2.3em -2.2em 0 #FFF, 
+  2.3em  2.4em 0 #FFF, 
+  -2.3em  2.4em 0 #FFF,
+  0   .2em 0 #FFF 
 }
 .die.six:after {
   background: transparent;
   box-shadow: -2.3em -2.3em 0 #345,
-        -2.3em      0 0 #345,
-        -2.3em  2.3em 0 #345,
-         2.3em -2.3em 0 #345,
-         2.3em      0 0 #345,
-         2.3em  2.3em 0 #345,
-        -2.3em -2.1em 0 #FFF,
-        -2.3em   .2em 0 #FFF,
-        -2.3em  2.4em 0 #FFF,
-         2.3em  2.4em 0 #FFF,
-         2.3em   .2em 0 #FFF,
-         2.3em -2.1em 0 #FFF
+  -2.3em      0 0 #345,
+  -2.3em  2.3em 0 #345,
+  2.3em -2.3em 0 #345,
+  2.3em      0 0 #345,
+  2.3em  2.3em 0 #345,
+  -2.3em -2.1em 0 #FFF,
+  -2.3em   .2em 0 #FFF,
+  -2.3em  2.4em 0 #FFF,
+  2.3em  2.4em 0 #FFF,
+  2.3em   .2em 0 #FFF,
+  2.3em -2.1em 0 #FFF
 }
 .die {
   background: #fff;
@@ -196,7 +218,7 @@ button#reset {
   background-image: linear-gradient(top, #fefefe, #f1f1f1 80%)
 }
 .die:after {
-        content: "";
+  content: "";
   width: 20%; 
   height: 20%; 
   left: 50%; 
@@ -207,3 +229,10 @@ button#reset {
   display: block;
   position: absolute;
 }
+
+#instruct {
+  display: none;
+  font-size: 15px;
+  margin: -35px;
+}
+

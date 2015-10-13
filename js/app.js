@@ -11,9 +11,13 @@ var player         = 0,
     diceTotal,
     dice = [null, "one", "two", "three", "four", "five", "six"];
 
+function getInstructions(){  $('#instruct').toggle();
+}
+
 function setUp(){
   $('#diceRoll').on("click", play);
   $("header").on("click", "#reset", reset);
+  $("#instructions").on("click", getInstructions);
 }
 
 function changePlayer(){
@@ -88,7 +92,7 @@ function displayDice(){
   $("#dice").append("<div class='animated shake die "+dice[d1]+"'></div>");
   setTimeout(function(){
     $("#dice").append("<div class='animated shake die "+dice[d2]+"'></div>");
-  }, 1500)
+  }, 1000)
   setTimeout(function(){
     choosePlayer();
     increaseTotal();
@@ -98,7 +102,7 @@ function displayDice(){
     updateRolls();
     newRound();
     gameOver();
-  }, 3000)
+  }, 2500)
 }
 
 function rollDice(){
