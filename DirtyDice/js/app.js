@@ -39,6 +39,8 @@ function gameOver(){
 
 function newRound(){
   if (newRoundCheck()) {
+    $("#player_0_rolls").empty();
+    $("#player_1_rolls").empty();
     $("#player_0_roundstotal").append("<li>Round "+ numberOfRounds +": " + totals[0] + "</li>");
     $("#player_1_roundstotal").append("<li>Round "+ numberOfRounds +": " + totals[1] + "</li>");
     numberOfRolls = 0;
@@ -58,7 +60,7 @@ function updateRolls(){
                  "<div class='die "+dice[d1]+"'></div>" +
                  "<div class='die "+dice[d2]+"'></div>" +
                "</li>"
-  return $("#player_"+player+"_rolls").append(string);
+  return $("#player_"+player+"_rolls").prepend(string);
 }
 
 function updateStatus(){
@@ -124,8 +126,8 @@ function play(){
   storeRolls();
   updateRolls();
   updateStatus();
-  increaseTotal();
   checkForDoubles();
+  increaseTotal();
   newRound();
   gameOver();
 }
