@@ -10,16 +10,27 @@ body, ul, li {
 
 body {
   font-family: 'Carter One', cursive;
-  background: #A2A2A2;
+  background: #BC967F;
   color: #fff;
   text-align: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  /*background-image: url("../images/Melbourne-Street-Art-Alleyway.jpg");*/
 }
 
 header {
-  width: 600px;
+  width: 900px;
   margin: 0 auto;
+  text-align: center;
+  color: #FFF;
+  background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+  background-image: -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -moz-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -moz-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+  background-image: -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -ms-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -ms-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+  background-image: -o-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -o-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -o-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+  background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+  background-position: 0 0, 0 0, 13px 0, 28px 15px, 0 0, 0 0, 15px 15px;
+  background-size: 600px 300px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px;
+  background-repeat: repeat;
 }
 
 main {
@@ -45,7 +56,7 @@ li {
 
 #dice {
   min-height: 100px;
-  line-height: 100px;
+  line-height:;
 }
 
 .dice {
@@ -65,7 +76,6 @@ button#reset {
   background: red;
 }
 
-/* CSS Dice: An Experiment by Jonathan Sampson - @jonathansampson */
 .die.one:after { 
   box-shadow: 0 .2em 0 #FFF 
 }
