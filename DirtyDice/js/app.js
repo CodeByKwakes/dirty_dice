@@ -90,7 +90,14 @@ function displayDice(){
     $("#dice").append("<div class='animated shake die "+dice[d2]+"'></div>");
   }, 1500)
   setTimeout(function(){
-  
+    choosePlayer();
+    increaseTotal();
+    updateStatus();
+    checkForDoubles();
+    storeRolls();
+    updateRolls();
+    newRound();
+    gameOver();
   }, 3000)
 }
 
@@ -127,12 +134,4 @@ function reset(){
 function play(){
   if (end()) return false;
   rollDice();
-  choosePlayer();
-  increaseTotal();
-  updateStatus();
-  checkForDoubles();
-  storeRolls();
-  updateRolls();
-  newRound();
-  gameOver();
 }
