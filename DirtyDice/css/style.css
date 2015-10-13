@@ -1,6 +1,43 @@
+@font-face{
+  font-family: graff;
+  src: url(../fonts/SpriteGraffiti.otf);
+}
+
+@font-face{
+  font-family: graff-s;
+  src: url(../fonts/SpriteGraffitiShadow.otf);
+}
+
+h1{
+  font-family: graff-s;
+  font-size: 55px;
+  margin: 0;
+  margin-top: 40px;
+}
+
+h2{
+  font-family: graff-s;
+  font-size: 45px;
+}
+
 html, body {
   height: 100%;
   min-height: 100%;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+  font-family: graff;
+  color: white;
+  font-size: 40px;
+  margin: 10px;
+}
+
+h4:hover {
+  cursor: pointer;
 }
 
 body, ul, li {
@@ -8,35 +45,47 @@ body, ul, li {
   padding: 0;
 }
 
+img {
+  width: 300px;
+}
+
 body {
-  font-family: 'Carter One', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   background: #BC967F;
   color: #fff;
   text-align: center;
   background-repeat: no-repeat;
-  background-size: 100%;
-  /*background-image: url("../images/Melbourne-Street-Art-Alleyway.jpg");*/
+  background-position: center;
+  /*background-size: 100%;*/
+  background-image: url("../images/dirty-dice.png");
+  width: 1000px;
+  margin: 0 auto;
 }
 
 header {
-  width: 900px;
+  width: 600px;
   margin: 0 auto;
   text-align: center;
-  color: #FFF;
-  background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -moz-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -moz-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -ms-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -ms-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -o-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -o-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -o-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-position: 0 0, 0 0, 13px 0, 28px 15px, 0 0, 0 0, 15px 15px;
-  background-size: 600px 300px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px;
-  background-repeat: repeat;
+  color: white;
 }
 
 main {
   width: 600px;
   margin: 0 auto;
   overflow: hidden;
+  float: left;
+}
+
+.player-one, .player-two {
+  margin-top: 30px;
+  float: left;
+  width: 200px;
+}
+
+#player_0_total, #player_1_total {
+  font-family: graff;
+  font-size: 60px;
 }
 
 section {
@@ -65,11 +114,15 @@ li {
 
 button {
   background: white;
-  font-family: 'Carter One', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   border: 0;
   padding: 10px 20px;
   border-radius: 5px;
+}
+
+button:focus {
+  outline: 0;
 }
 
 button#reset {
@@ -154,4 +207,3 @@ button#reset {
   display: block;
   position: absolute;
 }
-body { text-align: center }

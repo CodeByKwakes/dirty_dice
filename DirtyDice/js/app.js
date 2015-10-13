@@ -85,8 +85,13 @@ function choosePlayer(){
 
 function displayDice(){
   $("#dice").empty();
-  $("#dice").append("<div class='die "+dice[d1]+"'></div>");
-  $("#dice").append("<div class='die "+dice[d2]+"'></div>");
+  $("#dice").append("<div class='animated shake die "+dice[d1]+"'></div>");
+  setTimeout(function(){
+    $("#dice").append("<div class='animated shake die "+dice[d2]+"'></div>");
+  }, 1500)
+  setTimeout(function(){
+  
+  }, 3000)
 }
 
 function rollDice(){
@@ -122,12 +127,12 @@ function reset(){
 function play(){
   if (end()) return false;
   rollDice();
-  choosePlayer()
-  storeRolls();
-  updateRolls();
+  choosePlayer();
+  increaseTotal();
   updateStatus();
   checkForDoubles();
-  increaseTotal();
+  storeRolls();
+  updateRolls();
   newRound();
   gameOver();
 }
