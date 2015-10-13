@@ -73,7 +73,7 @@ function storeRolls(){
 
 function checkForDoubles(){
   if (d1 === d2) {
-    $("#status").html($("#status").html() + " - You threw DOUBLES!");
+    $("#status").html($("#status").html() + " - x2 Bonus Points for DOUBLES!!!");
     totals[player] += diceTotal;
   }
 }
