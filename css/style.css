@@ -8,7 +8,7 @@
   src: url(../fonts/SpriteGraffitiShadow.otf);
 }
 
-h1{
+h1 {
   font-family: graff-s;
   font-size: 55px;
   margin: 0;
@@ -16,7 +16,7 @@ h1{
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-h2{
+h2 {
   font-family: graff;
   font-size: 45px;
   color: #F8212C;
@@ -52,7 +52,6 @@ h5 {
   font-family: graff;
   font-size: 20px;
   margin-top: 373px;
-  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 body, ul, li {
